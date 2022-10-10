@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body header {
+  background-color: black;
+  height: 80px;
+  z-index: 10;
+}
+body header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body header nav .texts {
+  color: white;
+}
+body header nav .texts ul {
+  list-style-type: none;
+}
+body .saved-sec {
+  max-width: 100%;
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map */

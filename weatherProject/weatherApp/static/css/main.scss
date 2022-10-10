@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    header{
+        background-color: black;
+        height: 80px;
+        z-index:10;
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .texts{
+                color: white;
+
+                ul{
+                    list-style-type: none;
+                }
+            }
+        }
+    }
+    .saved-sec{
+        max-width: 100%;
+        text-align: center;
+        
+    }
+}

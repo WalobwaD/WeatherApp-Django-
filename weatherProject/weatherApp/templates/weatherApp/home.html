@@ -1,0 +1,41 @@
+{% extends 'weatherApp/base.html' %}
+
+{% block title %}
+Home 
+{% endblock %}
+
+{% block content %}
+    {% comment %} <section class="query">
+        <form class="form-control">
+            <input type="text" class="form-control" placeholder="search city" name='city'>
+        </form>
+        <div class="all">
+            <p class="name">{{city.city}}
+            <p class="init">{{city.country_name}}</p>
+            <p class="weather">{{city.current_weather}}</p>
+            <img class="icon" src="https://api.openweathermap.org/img/w/{{city.weather_icon}}.png">
+            <p class="temp">{{city.current_temp}} ° C</p>
+            <p class="desc">{{city.desc}}</p>
+        </div>
+    </section> {% endcomment %}
+    
+    <section class="saved-sec">
+        <form class="form form-control flex" method="POST">
+            {% csrf_token %}
+            {{form}}
+            <button type="submit" class="btn ">Add City</button>
+        </form>
+        {% for city in cities %}
+            
+                <div class="all">
+                    <p class="name">{{city.city}}
+                    <p class="init">{{city.country_name}}</p>
+                    <p class="weather">{{city.current_weather}}</p>
+                    <img class="icon" src="https://api.openweathermap.org/img/w/{{city.weather_icon}}.png">
+                    <p class="temp">{{city.current_temp}} ° C</p>
+                    {% comment %} <p class="press">{{city.current_press}}</p> {% endcomment %}
+                    <p class="desc">{{city.desc}}</p>
+                </div>
+        {% endfor %}
+    </section>
+{% endblock %}
